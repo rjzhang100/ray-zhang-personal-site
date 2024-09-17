@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Routes } from './utils/routes';
+import { Routes } from './constants/routes';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';

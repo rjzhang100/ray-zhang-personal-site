@@ -1,0 +1,34 @@
+$animation-duration: 0.3s;
+
+@mixin slideInY {
+  @keyframes slideInY {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  animation: slideInY $animation-duration ease forwards;
+}
+
+@mixin slideOutY {
+  @keyframes slideOutY {
+    from {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+  animation: slideOutY $animation-duration ease forwards;
+}
+
+:export {
+  animationDuration: $animation-duration;
+}

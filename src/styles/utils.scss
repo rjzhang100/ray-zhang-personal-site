@@ -1,0 +1,6 @@
+@use './variables.scss' as var;
+
+@function pxToRem($px) {
+  $rem: ($px / var.$font-size) + rem;
+  @return $rem;
+}

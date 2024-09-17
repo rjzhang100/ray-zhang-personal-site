@@ -1,7 +1,42 @@
-import styles from "./Home.module.scss";
-
 const Home = () => {
-  return <>hello world</>;
+  return (
+    <>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+      <p>BLAH</p>
+    </>
+  );
 };
 
 export default Home;

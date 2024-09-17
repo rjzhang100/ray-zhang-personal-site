@@ -1,0 +1,11 @@
+$mobile-bp: 768px;
+
+@mixin desktop {
+  @media (min-width: $mobile-bp) {
+    @content;
+  }
+}
+
+:export {
+  mobileBreakpoint: $mobile-bp;
+}

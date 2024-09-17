@@ -1,5 +1,6 @@
 @use './variables.scss' as var;
 
 body {
+  margin: 0;
   background-color: var.$page-color;
 }
