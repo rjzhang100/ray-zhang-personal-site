@@ -10,17 +10,17 @@ import './styles/global.scss';
 const router = createBrowserRouter([
   {
     path: Routes.HOME,
-    element: <Layout />,
-    children: [
-      {
-        path: Routes.HOME,
-        element: <Home />,
-      },
-      {
-        path: Routes.FALLBACK,
-        element: <NotFound />,
-      },
-    ],
+    element: <Home />,
+    // children: [
+    //   {
+    //     path: Routes.HOME,
+    //     element: <Home />,
+    //   },
+    //   {
+    //     path: Routes.FALLBACK,
+    //     element: <NotFound />,
+    //   },
+    // ],
   },
 ]);
 

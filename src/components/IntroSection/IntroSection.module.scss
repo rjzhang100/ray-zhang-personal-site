@@ -65,6 +65,7 @@
   margin-top: utils.pxToRem(50px);
   border-radius: utils.pxToRem(100px);
   height: 50vh;
+  box-shadow: var.$box-shadow;
   @include bp.desktop {
     margin-top: 0;
   }

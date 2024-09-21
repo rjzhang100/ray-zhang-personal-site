@@ -1,4 +1,4 @@
-import { Text } from '../../constants/text';
+import { NavbarLinks, Text } from '../../constants/text';
 import styles from './Navbar.module.scss';
 import lottieBurger from '../../assets/lotties/burger-menu-animation.json';
 import { FC, useEffect, useRef, useState } from 'react';
@@ -8,11 +8,18 @@ import animations from '@/styles/animations.module.scss';
 import cx from 'classnames';
 import useScroll from '../../hooks/useScroll';
 import { HIDE_NAVBAR_POINT } from '../../constants/misc';
+import logo from '../../assets/logo.svg';
+import { LinkRef } from '../../constants/types';
+
+interface INavbar {
+  refs: LinkRef[];
+  scrollToSection: (ref: React.RefObject<HTMLDivElement>) => void;
+}
 
 const ANIMATION_LENGTH = parseFloat(animations.animationDuration) * 1000;
 const STICKY_POINT = 50;
 
-const Navbar: FC = () => {
+const Navbar: FC<INavbar> = ({ refs, scrollToSection }) => {
   const isMobile = useWindowSize();
   const burgerLottieRef = useRef<LottieRefCurrentProps>(null);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
@@ -59,7 +66,14 @@ const Navbar: FC = () => {
           })}
         >
           <div className={styles.navbarConstant}>
-            <div className={styles.name}>{Text.NAME}</div>
+            <img
+              className={styles.logo}
+              src={logo}
+              alt="great logo of my name"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            />
             {isMobile && (
               <div className={styles.burgerIcon} onClick={handleClick}>
                 <Lottie
@@ -79,10 +93,19 @@ const Navbar: FC = () => {
                 [styles.linksLeaving]: dropdownLeaving,
               })}
             >
-              <p className={styles.navbarLink}>{Text.WORK_EXPERIENCE}</p>
-              <p className={styles.navbarLink}>{Text.PROJECTS}</p>
-              <p className={styles.navbarLink}>{Text.HOBBIES}</p>
-              <p className={styles.navbarLink}>{Text.CARS}</p>
+              {Array.from(Object.values(NavbarLinks)).map((linkName) => (
+                <p
+                  className={styles.navbarLink}
+                  onClick={() => {
+                    scrollToSection(
+                      refs.find((linkRef) => linkRef.link === linkName)
+                        ?.ref as React.RefObject<HTMLDivElement>
+                    );
+                  }}
+                >
+                  {linkName}
+                </p>
+              ))}
             </div>
           )}
         </div>

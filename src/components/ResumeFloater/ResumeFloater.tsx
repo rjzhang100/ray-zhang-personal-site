@@ -32,9 +32,7 @@ const ResumeFloater = () => {
   return (
     <>
       <div
-        className={cx({
-          [styles.resumeFloater]: true,
-        })}
+        className={styles.resumeFloater}
         onClick={() => {
           window.open(`/resume.pdf`, '_blank');
         }}

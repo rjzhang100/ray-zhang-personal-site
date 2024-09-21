@@ -4,21 +4,19 @@
 @use '@/styles/animations.module.scss' as animations;
 @use '@/styles/breakpoints.module.scss' as bp;
 
-$top-padding: 48px;
-$mobile-side-padding: 48px;
-$desktop-side-padding: 256px;
-
-.aboutMe {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: utils.pxToRem($top-padding) utils.pxToRem($mobile-side-padding);
+  padding: utils.pxToRem(var.$top-padding)
+    utils.pxToRem(var.$mobile-side-padding);
   position: relative;
   @include animations.fadeIn;
 
   @include bp.desktop {
-    padding: utils.pxToRem($top-padding) utils.pxToRem($desktop-side-padding);
+    padding: utils.pxToRem(var.$top-padding)
+      utils.pxToRem(var.$desktop-side-padding);
   }
 }
 
@@ -27,11 +25,11 @@ $desktop-side-padding: 256px;
   align-items: center;
   @include typekit.header;
 
-  &Wave {
+  &Icon {
     position: absolute;
     width: utils.pxToRem(64px);
-    top: calc($top-padding - 10px);
-    left: $mobile-side-padding;
+    top: calc(var.$top-padding - 10px);
+    left: var.$mobile-side-padding;
     transform: rotate(-15deg);
 
     @include animations.fadeIn;
@@ -41,8 +39,8 @@ $desktop-side-padding: 256px;
     }
 
     @include bp.desktop {
-      top: calc($top-padding - 20px);
-      left: calc($desktop-side-padding - 20px);
+      top: calc(var.$top-padding - 20px);
+      left: calc(var.$desktop-side-padding - 20px);
     }
   }
 }

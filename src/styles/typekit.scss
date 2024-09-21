@@ -39,3 +39,16 @@ $font: 'Jost', 'serif';
   font-weight: 500;
   font-size: 16px;
 }
+
+@mixin work-name {
+  font-family: $font;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+@mixin skill-block {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 550;
+}

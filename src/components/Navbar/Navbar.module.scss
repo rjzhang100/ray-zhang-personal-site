@@ -9,6 +9,18 @@
   justify-content: center;
   align-self: flex-start;
   width: 100%;
+  position: sticky;
+  top: utils.pxToRem(20px);
+  height: var.$navbar-height;
+  z-index: var.$z-index-navbar;
+}
+
+.logo {
+  width: utils.pxToRem(64px);
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .navbar {

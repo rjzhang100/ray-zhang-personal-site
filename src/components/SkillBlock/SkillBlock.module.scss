@@ -1,0 +1,15 @@
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+@use '@/styles/typekit.scss' as typekit;
+
+.skillBlock {
+  display: inline-block;
+  padding: 0 utils.pxToRem(16px);
+  background-color: var.$accent-color;
+  color: white;
+  @include typekit.skill-block;
+  margin-right: utils.pxToRem(16px);
+  border-radius: 12px;
+}

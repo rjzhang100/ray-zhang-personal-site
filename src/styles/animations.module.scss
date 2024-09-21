@@ -137,6 +137,30 @@ $animation-duration: 0.3s;
   animation: fadeIn 1s ease-in-out forwards;
 }
 
+@mixin fadeInFast {
+  @keyframes fadeInFast {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: fadeInFast 0.3s ease-in-out forwards;
+}
+
+@mixin fadeOutFast {
+  @keyframes fadeOutFast {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  animation: fadeOutFast 0.3s ease-in-out forwards;
+}
+
 :export {
   animationDuration: $animation-duration;
 }
