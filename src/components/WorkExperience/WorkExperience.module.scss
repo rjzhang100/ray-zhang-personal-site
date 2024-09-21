@@ -7,17 +7,14 @@
 .workExperience {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .workDetails {
   display: grid;
   grid-template-columns: auto auto;
-  column-gap: utils.pxToRem(128px);
-  height: utils.pxToRem(780px);
-
   @include animations.fadeInFast;
+  column-gap: utils.pxToRem(16px);
 
   &Fade {
     @include animations.fadeOutFast;
@@ -36,6 +33,10 @@
 
   &Skills {
     grid-column: 1/-1;
+  }
+
+  @include bp.desktop {
+    column-gap: utils.pxToRem(128px);
   }
 }
 

@@ -6,6 +6,7 @@ import styles from './WorkExperience.module.scss';
 import cx from 'classnames';
 import {
   WorkDescriptionDetails,
+  WorkDescriptionJobTitles,
   WorkDescriptionSkills,
   WorkDescriptionSummary,
 } from '../../constants/text';
@@ -34,7 +35,9 @@ const WorkExperience = () => {
             [styles.workDetailsFade]: !isVisible,
           })}
         >
-          <div className={styles.workDetailsName}>{activeTab}</div>
+          <div
+            className={styles.workDetailsName}
+          >{`${activeTab} --- ${WorkDescriptionJobTitles[activeTab]}`}</div>
           <div className={styles.workDetailsSkills}>
             <p className={styles.workDetailsHeaders}>SKILLS</p>
 
@@ -55,7 +58,6 @@ const WorkExperience = () => {
             </ul>
           </div>
         </div>
-
         <div className={styles.thumbnailGrid}>
           {workplaces.map((workName) => (
             <div
@@ -74,6 +76,7 @@ const WorkExperience = () => {
             </div>
           ))}
         </div>
+
         <div className={styles.clickToLearn}>Click one to learn more!</div>
       </div>
     </PageSection>
