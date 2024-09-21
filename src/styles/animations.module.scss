@@ -29,6 +29,114 @@ $animation-duration: 0.3s;
   animation: slideOutY $animation-duration ease forwards;
 }
 
+@mixin slideUp {
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: slideUp $animation-duration ease forwards;
+}
+
+@mixin slideDown {
+  @keyframes slideDown {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
+  animation: slideDown $animation-duration ease forwards;
+}
+
+@mixin rotateIn {
+  @keyframes rotateIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg) translateY(20px); /* Start from below, invisible */
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg) translateY(0); /* Rotate into view */
+    }
+  }
+  animation: rotateIn 1s ease-in-out forwards;
+}
+
+@mixin rotateOut {
+  @keyframes rotateOut {
+    0% {
+      opacity: 1;
+      transform: rotateX(0deg) translateY(0); /* Start in view */
+    }
+    100% {
+      opacity: 0;
+      transform: rotateX(-90deg) translateY(-20px); /* Rotate out clockwise */
+    }
+  }
+  animation: rotateOut 800ms ease-in-out forwards; /* Rotate out slightly quicker */
+}
+
+@mixin loadSlideFadeUp {
+  @keyframes loadSlideFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  animation: loadSlideFadeUp 1s ease-in-out forwards;
+}
+
+@mixin loadSlideFadeDown {
+  @keyframes loadSlideFadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  animation: loadSlideFadeDown 0.5s ease-in-out forwards;
+}
+
+@mixin fadeOut {
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@mixin fadeIn {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
 :export {
   animationDuration: $animation-duration;
 }

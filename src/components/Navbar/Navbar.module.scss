@@ -1,20 +1,33 @@
-@use '../../styles/variables.scss' as var;
-@use '../../styles/utils.scss' as utils;
-@use '../../styles/breakpoints.module.scss' as bp;
-@use '../../styles/animations.module.scss' as animations;
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+@use '@/styles/typekit.scss' as typekit;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  width: 100%;
+}
 
 .navbar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var.$page-color;
-  width: 100%;
-  height: utils.pxToRem(var.$navbar-height);
-  border-radius: 4px;
+  width: 80%;
+  border-radius: 20px;
+  border: 2px solid grey;
   box-shadow: none;
-  position: fixed;
-  top: 0;
   transition: box-shadow 0.2s ease-in-out;
+  position: relative;
+  height: var.$navbar-height;
+  @include animations.loadSlideFadeDown;
+
+  &Leaving {
+    @include animations.slideOutY;
+  }
 
   &Sticky {
     box-shadow: var.$box-shadow;
@@ -27,6 +40,7 @@
 
   @include bp.desktop {
     flex-direction: row;
+    overflow: hidden;
   }
 
   &Constant {
@@ -34,8 +48,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 utils.pxToRem(48px);
-    width: 100%;
+    width: 65%;
     height: 100%;
+
+    @include typekit.navbar;
   }
 
   &Link {
@@ -71,6 +87,8 @@
   background-color: var.$page-color;
   width: 100%;
   justify-content: space-evenly;
+
+  @include typekit.navbar;
 
   @include bp.desktop {
     flex-direction: row;

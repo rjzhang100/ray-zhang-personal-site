@@ -1,0 +1,76 @@
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/typekit.scss' as typekit;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+
+.rotateIn {
+  @include animations.rotateIn;
+}
+
+.rotateOut {
+  @include animations.rotateOut;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.introSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-height: 80vh;
+  padding: utils.pxToRem(80px) utils.pxToRem(128px);
+  @include animations.loadSlideFadeUp;
+
+  @include bp.desktop {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+
+  @include bp.desktop {
+    width: 35vw;
+  }
+
+  &Title {
+    @include typekit.title;
+    margin: utils.pxToRem(16px) 0;
+  }
+
+  &Subtext {
+    @include typekit.subtitle;
+
+    &Animated {
+      display: inline-block;
+      transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+      opacity: 1;
+    }
+  }
+}
+
+.selfPortrait {
+  margin-top: utils.pxToRem(50px);
+  border-radius: utils.pxToRem(100px);
+  height: 50vh;
+  @include bp.desktop {
+    margin-top: 0;
+  }
+}
+
+.downArrow {
+  margin: utils.pxToRem(20px) 0;
+  width: utils.pxToRem(50px);
+}

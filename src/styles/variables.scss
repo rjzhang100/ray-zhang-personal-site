@@ -1,8 +1,16 @@
-$font-size: 16px;
+$font-size: 20px;
 
 /* COLOURS */
-$page-color: #fffafa;
+$page-color: #fefcf3;
+$color1: #f5ebe0;
+$color2: #f0dbdb;
+$color3: #dba39a;
+
 $box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 
 /* SIZES */
 $navbar-height: 50px;
+$navbar-top-offset: 10px;
+
+/* Z-INDICES */
+$z-index-navbar: 10;

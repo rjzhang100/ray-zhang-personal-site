@@ -5,7 +5,7 @@ import styles from './Layout.module.scss';
 const Layout = () => {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <Navbar />
       </header>
       <main className={styles.main}>
