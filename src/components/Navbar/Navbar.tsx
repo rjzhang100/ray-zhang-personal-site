@@ -1,4 +1,4 @@
-import { NavbarLinks, Text } from '../../constants/text';
+import { NavbarLinks } from '../../constants/text';
 import styles from './Navbar.module.scss';
 import lottieBurger from '../../assets/lotties/burger-menu-animation.json';
 import { FC, useEffect, useRef, useState } from 'react';
