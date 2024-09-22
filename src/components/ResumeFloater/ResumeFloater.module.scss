@@ -41,8 +41,12 @@
   white-space: nowrap;
   position: absolute;
   top: -40px;
-  left: -12px;
+  left: -25px;
   pointer-events: none;
+  background-color: var.$page-color;
+  border-radius: utils.pxToRem(20px);
+  padding: 0 utils.pxToRem(16px);
+  box-shadow: var.$box-shadow;
 
   @include animations.slideUp;
 

@@ -40,6 +40,8 @@
   flex-direction: column;
   justify-content: center;
   width: 50vw;
+  height: 500px;
+  white-space: nowrap;
 
   @include bp.desktop {
     width: 35vw;
@@ -64,7 +66,7 @@
 .selfPortrait {
   margin-top: utils.pxToRem(50px);
   border-radius: utils.pxToRem(100px);
-  height: 50vh;
+  width: 50vh;
   box-shadow: var.$box-shadow;
   @include bp.desktop {
     margin-top: 0;

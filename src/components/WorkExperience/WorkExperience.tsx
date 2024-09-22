@@ -9,7 +9,7 @@ import {
   WorkDescriptionJobTitles,
   WorkDescriptionSkills,
   WorkDescriptionSummary,
-} from '../../constants/text';
+} from '../../constants/workExperience';
 import SkillBlock from '../SkillBlock/SkillBlock';
 
 const WorkExperience = () => {
@@ -58,6 +58,8 @@ const WorkExperience = () => {
             </ul>
           </div>
         </div>
+
+        {/* TODO: Make this horizontally scrollable if I get more jobs lol */}
         <div className={styles.thumbnailGrid}>
           {workplaces.map((workName) => (
             <div

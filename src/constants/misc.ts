@@ -6,3 +6,5 @@ export const EARLS = 'Earls Kitchen + Bar';
 export const KINJO = 'Kinjo Sushi and Grill';
 
 export const workplaces: string[] = [KG, SEMTECH, EARLS, KINJO];
+
+export const LINK_REGEX = /\*\*\*(.+?)\*\*\*\[(.+?)\]/g;

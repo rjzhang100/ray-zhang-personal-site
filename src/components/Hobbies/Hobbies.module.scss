@@ -1,0 +1,24 @@
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+@use '@/styles/typekit.scss' as typekit;
+
+.accordionSection {
+  display: grid;
+  grid-template-columns: auto;
+  width: 75vw;
+}
+
+.accordion {
+  background-color: var.$page-color;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: utils.pxToRem(32px);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var.$shade-color;
+  }
+}

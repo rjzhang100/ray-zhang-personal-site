@@ -1,0 +1,70 @@
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+@use '@/styles/typekit.scss' as typekit;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  @include typekit.navbar;
+}
+
+.preview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.downArrow {
+  width: utils.pxToRem(16px);
+  transition: transform 0.3s ease;
+
+  &Active {
+    transform: rotate(180deg);
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  margin-left: utils.pxToRem(160px);
+  justify-content: space-between;
+  white-space: pre-wrap;
+  @include animations.fadeInFast;
+
+  @include bp.desktop {
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include bp.desktop {
+    margin-left: utils.pxToRem(64px);
+  }
+}
+
+.image {
+  width: 100%;
+  border-radius: utils.pxToRem(25px);
+
+  &Caption {
+    margin-top: utils.pxToRem(16px);
+    @include typekit.caption;
+  }
+}
+
+.icon {
+  width: utils.pxToRem(128px);
+  margin-right: utils.pxToRem(32px);
+}

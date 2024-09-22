@@ -1,0 +1,17 @@
+@use '@/styles/variables.scss' as var;
+@use '@/styles/utils.scss' as utils;
+@use '@/styles/typekit.scss' as typekit;
+@use '@/styles/breakpoints.module.scss' as bp;
+@use '@/styles/animations.module.scss' as animations;
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: auto;
+  width: 100%;
+  gap: utils.pxToRem(78px);
+  margin: utils.pxToRem(32px) 0;
+
+  @include bp.desktop {
+    grid-template-columns: auto auto;
+  }
+}

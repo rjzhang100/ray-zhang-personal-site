@@ -1,5 +1,21 @@
+@use '../../styles/variables.scss' as var;
+@use '../../styles/utils.scss' as utils;
+
+.home {
+  padding-bottom: utils.pxToRem(32px);
+}
+
 .resume {
   position: fixed;
   bottom: 50px;
   right: 50px;
+}
+
+a {
+  all: unset;
+  color: var.$accent-color;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

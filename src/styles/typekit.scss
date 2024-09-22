@@ -52,3 +52,10 @@ $font: 'Jost', 'serif';
   font-size: 16px;
   font-weight: 550;
 }
+
+@mixin caption {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 250;
+  font-style: italic;
+}
