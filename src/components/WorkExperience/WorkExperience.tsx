@@ -29,7 +29,9 @@ const WorkExperience = () => {
   return (
     <PageSection sectionName="Work Experience">
       <div className={styles.workExperience}>
-        <div className={styles.clickToLearn}>Click one to learn more!</div>
+        <div className={styles.clickToLearn}>
+          Click one to read more about my experiences!
+        </div>
         <div className={styles.gridWrapper}>
           {/* TODO: Make this horizontally scrollable if I get more jobs lol */}
           <div className={styles.thumbnailGrid}>

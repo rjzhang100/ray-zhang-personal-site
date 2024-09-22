@@ -84,7 +84,7 @@
 }
 
 .clickToLearn {
-  margin-top: utils.pxToRem(32px);
+  margin: utils.pxToRem(32px) 0;
   @include typekit.small-text;
   font-style: italic;
 }
