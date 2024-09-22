@@ -68,7 +68,7 @@ $animation-duration: 0.3s;
       transform: rotateX(0deg) translateY(0); /* Rotate into view */
     }
   }
-  animation: rotateIn 1s ease-in-out forwards;
+  animation: rotateIn 0.5s ease-in-out forwards;
 }
 
 @mixin rotateOut {
@@ -82,7 +82,7 @@ $animation-duration: 0.3s;
       transform: rotateX(-90deg) translateY(-20px); /* Rotate out clockwise */
     }
   }
-  animation: rotateOut 800ms ease-in-out forwards; /* Rotate out slightly quicker */
+  animation: rotateOut 0.5s ease-in-out forwards; /* Rotate out slightly quicker */
 }
 
 @mixin loadSlideFadeUp {

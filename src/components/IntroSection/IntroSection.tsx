@@ -18,10 +18,8 @@ const IntroSection: FC = () => {
       setTimeout(() => {
         setCurrTextIndex((prevIndex) => (prevIndex + 1) % THINGS_I_AM.length);
 
-        setTimeout(() => {
-          setAnimationPhase('rotateIn');
-        }, 100);
-      }, 800);
+        setAnimationPhase('rotateIn');
+      }, 500);
     }, TEXT_CYCLE_INTERVAL);
 
     return () => {
