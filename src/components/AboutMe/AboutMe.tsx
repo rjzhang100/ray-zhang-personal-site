@@ -1,10 +1,9 @@
 import { FC } from 'react';
-import waveLottie from '../../assets/lotties/wave.json';
 import PageSection from '../PageSection/PageSection';
 
 const AboutMe: FC = () => {
   return (
-    <PageSection sectionName="About Me" lottieJson={waveLottie}>
+    <PageSection sectionName="About Me">
       <>
         <p>
           Hey, welcome and thanks for checking out my website! I'm Ray, and I'm
