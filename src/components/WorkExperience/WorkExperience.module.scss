@@ -12,7 +12,7 @@
 
 .workDetails {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   @include animations.fadeInFast;
   column-gap: utils.pxToRem(16px);
 
@@ -24,11 +24,21 @@
     @include typekit.navbar;
   }
 
-  &Name {
+  &Title {
+    grid-column: 1/-1;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: utils.pxToRem(64px);
+  }
+
+  &Name {
+    @include typekit.work-title;
+  }
+
+  &JobTitle {
     @include typekit.work-name;
-    grid-column: 1/-1;
   }
 
   &Skills {
@@ -37,14 +47,25 @@
 
   @include bp.desktop {
     column-gap: utils.pxToRem(128px);
+    grid-template-columns: auto auto;
   }
+}
+
+.gridWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .thumbnailGrid {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  column-gap: utils.pxToRem(64px);
-  margin-top: utils.pxToRem(32px);
+  margin-bottom: utils.pxToRem(32px);
+  column-gap: utils.pxToRem(16px);
+
+  @include bp.desktop {
+    column-gap: utils.pxToRem(64px);
+  }
 }
 
 .thumbnail {

@@ -44,7 +44,7 @@ $font: 'Jost', 'serif';
   font-family: $font;
   font-style: italic;
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 @mixin skill-block {
@@ -58,4 +58,10 @@ $font: 'Jost', 'serif';
   font-size: 16px;
   font-weight: 250;
   font-style: italic;
+}
+
+@mixin work-title {
+  font-family: $font;
+  font-size: 32px;
+  font-weight: 400;
 }

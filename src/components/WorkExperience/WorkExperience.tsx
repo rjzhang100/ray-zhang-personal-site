@@ -29,22 +29,45 @@ const WorkExperience = () => {
   return (
     <PageSection sectionName="Work Experience">
       <div className={styles.workExperience}>
+        <div className={styles.clickToLearn}>Click one to learn more!</div>
+        <div className={styles.gridWrapper}>
+          {/* TODO: Make this horizontally scrollable if I get more jobs lol */}
+          <div className={styles.thumbnailGrid}>
+            {workplaces.map((workName) => (
+              <div
+                key={workName}
+                className={cx([
+                  {
+                    [styles.thumbnail]: true,
+                    [styles.thumbnailActive]: activeTab == workName,
+                  },
+                ])}
+                onClick={() => {
+                  if (workName !== activeTab) handleTabChange(workName);
+                }}
+              >
+                <img
+                  className={styles.thumbnailImage}
+                  src={ImageMap[workName]}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div
           className={cx({
             [styles.workDetails]: true,
             [styles.workDetailsFade]: !isVisible,
           })}
         >
-          <div
-            className={styles.workDetailsName}
-          >{`${activeTab} --- ${WorkDescriptionJobTitles[activeTab]}`}</div>
-          <div className={styles.workDetailsSkills}>
-            <p className={styles.workDetailsHeaders}>SKILLS</p>
-
-            {WorkDescriptionSkills[activeTab].map((skill) => (
-              <SkillBlock>{skill}</SkillBlock>
-            ))}
+          <div className={styles.workDetailsTitle}>
+            <div className={styles.workDetailsName}>{activeTab}</div>
+            <div className={styles.workDetailsJobTitle}>
+              {WorkDescriptionJobTitles[activeTab]}
+            </div>
           </div>
+
           <div className={styles.workDetailsSummary}>
             <p className={styles.workDetailsHeaders}>SUMMARY</p>
             {WorkDescriptionSummary[activeTab]}
@@ -57,29 +80,14 @@ const WorkExperience = () => {
               ))}
             </ul>
           </div>
-        </div>
+          <div className={styles.workDetailsSkills}>
+            <p className={styles.workDetailsHeaders}>SKILLS</p>
 
-        {/* TODO: Make this horizontally scrollable if I get more jobs lol */}
-        <div className={styles.thumbnailGrid}>
-          {workplaces.map((workName) => (
-            <div
-              key={workName}
-              className={cx([
-                {
-                  [styles.thumbnail]: true,
-                  [styles.thumbnailActive]: activeTab == workName,
-                },
-              ])}
-              onClick={() => {
-                if (workName !== activeTab) handleTabChange(workName);
-              }}
-            >
-              <img className={styles.thumbnailImage} src={ImageMap[workName]} />
-            </div>
-          ))}
+            {WorkDescriptionSkills[activeTab].map((skill) => (
+              <SkillBlock>{skill}</SkillBlock>
+            ))}
+          </div>
         </div>
-
-        <div className={styles.clickToLearn}>Click one to learn more!</div>
       </div>
     </PageSection>
   );
