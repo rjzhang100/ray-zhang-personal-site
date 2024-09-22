@@ -6,6 +6,7 @@ header {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   background-color: var.$page-color;
 }
