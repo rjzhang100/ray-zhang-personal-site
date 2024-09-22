@@ -7,7 +7,11 @@
 .accordionSection {
   display: grid;
   grid-template-columns: auto;
-  width: 75vw;
+  width: 95vw;
+
+  @include bp.desktop {
+    width: 75vw;
+  }
 }
 
 .accordion {
