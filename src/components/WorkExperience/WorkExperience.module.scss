@@ -35,10 +35,12 @@
 
   &Name {
     @include typekit.work-title;
+    text-align: center;
   }
 
   &JobTitle {
     @include typekit.work-name;
+    text-align: center;
   }
 
   &Skills {
@@ -87,4 +89,5 @@
   margin: utils.pxToRem(32px) 0;
   @include typekit.small-text;
   font-style: italic;
+  text-align: center;
 }
