@@ -3,7 +3,7 @@ import { Project } from '../../constants/types';
 
 import styles from './ProjectCard.module.scss';
 
-const ProjectCard: FC<Project> = ({ title, description, gitLink, icon }) => {
+const ProjectCard: FC<Project> = ({ title, description, gitLink }) => {
   return (
     <>
       <div

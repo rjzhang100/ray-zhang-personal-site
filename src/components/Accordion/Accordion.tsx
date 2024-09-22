@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useRef } from 'react';
 import styles from './Accordion.module.scss';
 import { Hobby } from '../../constants/types';
 import arrow from '../../assets/down-arrow.svg';
