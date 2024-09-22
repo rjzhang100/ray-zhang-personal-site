@@ -26,7 +26,7 @@
   align-items: center;
   height: auto;
   max-height: 80vh;
-  padding: utils.pxToRem(80px) utils.pxToRem(128px);
+  padding: utils.pxToRem(80px) 0;
   @include animations.loadSlideFadeUp;
 
   @include bp.desktop {
