@@ -16,7 +16,5 @@ export const THINGS_I_AM = [
   'Car Enthusiast',
   'DIY Mechanic',
   'Competitive Pianist',
-  'Music Lover',
-  'Table Tennis Amateur',
-  'Badminton Rookie',
+  'Table Tennis Noob',
 ];
