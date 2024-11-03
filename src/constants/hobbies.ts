@@ -11,15 +11,14 @@ import cassia from '../assets/cassia.mp4';
 export const hobbies: Hobby[] = [
   {
     title: 'Music',
-    description: `I absolutely love discovering new artists and new music. Growing up, I did a lot of piano. I competed regularly, and completed my ARCT in the summer of 2018. Checkout videos of my playing ***here!***[https://www.youtube.com/@Fengtaro]\n\nAlthough I've stopped competing in piano, I still love listening to music. I'm pretty much always listening to something. Rap music is my everyday soundtrack, but I usually listen to City Pop when I'm doing work. Connect with me on ***Spotify!***[https://open.spotify.com/user/raazait?si=cca8db92812a4af8]That said, John Mayer's my overall favourite artist :) `,
+    description: `I love discovering new artists and new music. Growing up, I did a lot of piano. I competed regularly, and completed my ARCT in the summer of 2018. Checkout videos of my playing ***here!***[https://www.youtube.com/@Fengtaro]Although I've stopped competing in piano, I still love listening to music. I'm pretty much always listening to something - rap, 70s Japanese funk, whatever. John Mayer's my favourite though`,
     icon: musicLottie,
     image: piano,
-    imageCaption: 'Me playing Rach 2 with my teacher Glen Montgomery in 2019',
+    imageCaption: 'Me playing Rach 2',
   },
   {
     title: 'Racket Sports',
-    description:
-      "So I'm definitely not GOOD at table tennis or badminton per say, but I'm a big fan of the sports. I'm always playing table tennis on lunch breaks, working on my looping and serves. I recently switched from penhold to shakehand, so I've been focusing on improving my backhand.\n\nI played badminton in high school, and sometimes on weekends now. It's always a great time, and I'm always down to play. Heads up though, I'll probably be completely gassed after one game...",
+    description: `Trying to get better at table tennis and love playing badminton. I'll play table tennis anytime there's a table, and I'm always down for a badminton game. I'll probably gassed after one game though`,
     icon: pingPongLottie,
     image: tabletennis,
     imageCaption: 'Amazing Jellycat from FAO Schwarz in NYC',
@@ -27,7 +26,7 @@ export const hobbies: Hobby[] = [
   {
     title: 'Video Games',
     description:
-      "Aside from piano, the other defining experience of my childhood were video games. Some of my favourites growing up were Oblivion, Age of Empires III, Runescape, Team Fortress 2 and all of the Super Smash Bros entries.  While I (unfortunately) was super into League of Legends at one point, nowadays I'm usually playing indie roguelikes like The Binding of Isaac, or Slay the Spire.\n\nI've also been getting back into Monster Hunter. I played a lot of Monster Hunter Tri growing up, and I'm now swapping between MHW and MHGU.",
+      "Video games defined my childhood. Some of my favourites growing up were Oblivion, Age of Empires III and Runescape.  I'm nowadays usually playing indie roguelikes like The Binding of Isaac, or Slay the Spire.",
     icon: gamingLottie,
     image: games,
     imageCaption: 'The roots ran deep',

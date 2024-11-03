@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     title: 'Personal Site',
     description: [
-      'This site! Hopefully you like the UI and design, definitely check out the codebase and see how it was built',
+      'This site! Check out the codebase and see how it was built',
       'React/Typescript, Lottie for animations, built with a focus on modularity and to be easily extendable and modifiable',
       'Just an opportunity to practice and demonstrate my frontend skills',
     ],
