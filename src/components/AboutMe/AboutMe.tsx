@@ -7,19 +7,18 @@ const AboutMe: FC = () => {
       <>
         <p>
           Hey, welcome and thanks for checking out my website! I'm Ray, and I'm
-          in my final year of computer science at UBC. I'm currently also at
-          Konrad Group as a software developer intern!
+          in my final year of computer science at UBC. I'll be returning to
+          Konrad Group in September 2025 as a full time Associate Software
+          Developer!
         </p>
         <p>
-          Outside of work and school, I'm a huge car nerd, spending most of my
-          free time either learning about or working on cars. I'm also a huge
-          music fan, and pretty much always am listening to something throughout
-          my day.
+          Outside of work and school, I spend most of my free time either
+          learning about or working on cars. I've also been really getting into
+          hockey.
         </p>
         <p>
-          Feel free to explore this site to learn more about me, and some of the
-          cool stuff I've been up to! I'm always open to connect and meet new
-          people, so shoot me a message!
+          I'll try to keep this site up to date, but feel free to explore this
+          site to learn more about me, and some of the stuff I've been up to!
         </p>
       </>
     </PageSection>

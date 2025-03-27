@@ -2,6 +2,17 @@ import { Project } from './types';
 
 export const projects: Project[] = [
   {
+    title: 'Hockey Guesser',
+    description: [
+      'A WIP app for you and your friends to guess the outcome of NHL hockey games, for fun!',
+      'React frontend with Material UI components, express backend with tRPC API, MongoDB for storage',
+      'Leverages NHL API for live game data',
+      'User authentication so you can login and play with your friends',
+      `App is live on app.hockeyrjz.ca, but check the repo's issues tab to see what I'm working on. If you do use it at all, let me know your ideas about improvements or feedback in the repo discussions`,
+    ],
+    gitLink: 'https://github.com/rjzhang100/hockey-guess',
+  },
+  {
     title: 'LSTM Music Composition Bot',
     description: [
       "Designed and trained a multi-layered LSTM neural network in Tensorflow on Keras' Functional API to compose short MIDI clips",

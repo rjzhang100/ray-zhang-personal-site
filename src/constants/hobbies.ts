@@ -18,7 +18,7 @@ export const hobbies: Hobby[] = [
   },
   {
     title: 'Racket Sports',
-    description: `Trying to get better at table tennis and love playing badminton. I'll play table tennis anytime there's a table, and I'm always down for a badminton game. I'll probably gassed after one game though`,
+    description: `Trying to get better at table tennis and love playing badminton. I'll play table tennis anytime there's a table, and I'm always down for a badminton game. I'll probably be gassed after one game though`,
     icon: pingPongLottie,
     image: tabletennis,
     imageCaption: 'Amazing Jellycat from FAO Schwarz in NYC',
