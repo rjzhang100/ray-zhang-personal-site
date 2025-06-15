@@ -6,10 +6,8 @@ const AboutMe: FC = () => {
     <PageSection sectionName="About Me">
       <>
         <p>
-          Hey, welcome and thanks for checking out my website! I'm Ray, and I'm
-          in my final year of computer science at UBC. I'll be returning to
-          Konrad Group in September 2025 as a full time Associate Software
-          Developer!
+          Hey, welcome and thanks for checking out my website! I'm Ray, I'm a
+          UBC 2025 computer science graduate.
         </p>
         <p>
           Outside of work and school, I spend most of my free time either
